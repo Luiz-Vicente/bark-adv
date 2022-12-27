@@ -1,7 +1,21 @@
 <template>
-  <header>
-    <h1>Home</h1>
-  </header>
+
+  <ONavbar />
 
   <RouterView />
+
+  <OFooter />
+
 </template>
+
+<script>
+import ONavbar from '@/components/organisms/O-Navbar.vue';
+import OFooter from '@/components/organisms/O-Footer.vue';
+
+export default {
+  components: {
+    ONavbar,
+    OFooter
+  }
+}
+</script>
