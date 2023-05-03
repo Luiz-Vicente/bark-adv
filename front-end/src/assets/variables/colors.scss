@@ -1,0 +1,27 @@
+$custom-black:        #000000;
+$custom-white:        #F4F4F4;
+$custom-gold:         #BF894B;
+$custom-gold-dark:    #805627;
+$custom-gray-light:   #323232;
+$custom-gray:         #1E1E1E;
+$custom-gray-dark:    #111111;
+
+$colors: (
+  "custom-black":       $custom-black,
+  "custom-white":       $custom-white,
+  "custom-gold":        $custom-gold,
+  "custom-gold-dark":   $custom-gold-dark,
+  "custom-gray-light":  $custom-gray-light,
+  "custom-gray":        $custom-gray,
+  "custom-gray-dark":   $custom-gray-dark,
+);
+
+$theme-colors: (
+  "custom-black":       $custom-black,
+  "custom-white":       $custom-white,
+  "custom-gold":        $custom-gold,
+  "custom-gold-dark":   $custom-gold-dark,
+  "custom-gray-light":  $custom-gray-light,
+  "custom-gray":        $custom-gray,
+  "custom-gray-dark":   $custom-gray-dark,
+);
