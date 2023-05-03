@@ -6,8 +6,8 @@ import router from "./router";
 import ImageAtom from "./components/atom/ImageAtom.vue";
 import TextAtom from "./components/atom/TextAtom.vue";
 
-import "./assets/main.scss";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+import "./assets/main.scss";
 
 const app = createApp(App);
 

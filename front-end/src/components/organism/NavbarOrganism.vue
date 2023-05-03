@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-dark navbar-expand-lg bg-black bg-light">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-black border-2 border-bottom border-custom-gold">
     <div class="container-fluid">
       <ImageAtom
         src="/images/logos/logo-branca-pequena.webp"
