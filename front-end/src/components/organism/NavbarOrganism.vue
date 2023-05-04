@@ -1,5 +1,6 @@
 <template>
-  <nav class="navbar navbar-dark navbar-expand-lg bg-black border-2 border-bottom border-custom-gold">
+  <nav style="z-index: 2;" class="navbar navbar-dark position-fixed w-100 navbar-expand-lg bg-black border-2 border-bottom border-custom-gold">
+  <!-- <nav style="z-index: 2;" class="navbar navbar-dark navbar-expand-lg bg-black border-2 border-bottom border-custom-gold"> -->
     <div class="container-fluid">
       <ImageAtom
         src="/images/logos/logo-branca-pequena.webp"
@@ -23,35 +24,35 @@
             <a
               class="nav-link active text-white text-decoration-none p-4 fs-4"
               aria-current="page"
-              href="/"
+              href="#time"
               >Time</a
             >
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-white text-decoration-none p-4 fs-4"
-              href="/"
+              href="#especialidades"
               >Especialidades</a
             >
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-white text-decoration-none p-4 fs-4"
-              href="/"
+              href="#artigos"
               >Artigos</a
             >
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-white text-decoration-none p-4 fs-4"
-              href="/"
+              href="#rodape"
               >Contato</a
             >
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-white text-decoration-none p-4 fs-4"
-              href="/"
+              href="#rodape"
               >Localização</a
             >
           </li>

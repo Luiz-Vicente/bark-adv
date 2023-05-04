@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" v-bind:class="customClass">{{ text }}</component>
+  <component :is="tag" v-bind:class="customClass+' m-0'">{{ text }}</component>
 </template>
 
 <script>

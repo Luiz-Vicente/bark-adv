@@ -1,5 +1,6 @@
 <template>
-  <div class="d-flex flex-md-row flex-column bg-custom-gray">
+  <div style="height: 10vh; width: 100%;"></div>
+  <div class="banner d-flex flex-md-row flex-column bg-custom-gray">
     <div class="col-md-6 col px-3 bg-gradient-gray">
       <swiper
         @swiper="setControlledSwiper"
@@ -130,7 +131,7 @@ export default {
 
 <style scoped>
 div {
-  height: 85.4vh;
+  height: 90vh;
 }
 .swiper {
   --swiper-navigation-size: 30px;
