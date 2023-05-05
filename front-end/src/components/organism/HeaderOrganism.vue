@@ -1,9 +1,10 @@
 <template>
-  <div style="height: 10vh; width: 100%;"></div>
+  <div style="height: 10vh; width: 100%"></div>
   <div class="banner d-flex flex-md-row flex-column bg-custom-gray">
     <div class="col-md-6 col px-3 bg-gradient-gray">
       <swiper
-        @swiper="setControlledSwiper"
+        @swiper="setFirstSwiper"
+        :controller="{ control: secondSwiper }"
         :direction="'vertical'"
         :loop="true"
         :pagination="{
@@ -27,7 +28,7 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div class="col-md-6 col d-md-block d-none">
+    <div class="col-md-6 col d-md-block bg-custom-gray">
       <swiper
         :slidesPerView="1"
         :spaceBetween="30"
@@ -44,7 +45,8 @@
         }"
         :navigation="true"
         :modules="modules"
-        :controller="{ control: controlledSwiper }"
+        @swiper="setSecondSwiper"
+        :controller="{ control: firstSwiper }"
       >
         <swiper-slide v-for="banner in bannersList" :key="banner.index">
           <ImageAtom v-bind:src="banner.src" />
@@ -105,14 +107,20 @@ export default {
     };
   },
   setup() {
-    const controlledSwiper = ref(null);
-    const setControlledSwiper = (swiper) => {
-      controlledSwiper.value = swiper;
+    const firstSwiper = ref(null);
+    const secondSwiper = ref(null);
+    const setFirstSwiper = (swiper) => {
+      firstSwiper.value = swiper;
+    };
+    const setSecondSwiper = (swiper) => {
+      secondSwiper.value = swiper;
     };
     return {
       Controller,
-      controlledSwiper,
-      setControlledSwiper,
+      firstSwiper,
+      secondSwiper,
+      setFirstSwiper,
+      setSecondSwiper,
       modules: [Controller, Navigation, Autoplay],
     };
   },
@@ -125,6 +133,12 @@ export default {
     prevButton.classList.add("border", "rounded", "p-4");
     prevButton.style.top = "90%";
     prevButton.style.left = "82%";
+
+    // Hide buttons on mobile screens
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      nextButton.style.display = "none";
+      prevButton.style.display = "none";
+    }
   },
 };
 </script>
@@ -132,6 +146,15 @@ export default {
 <style scoped>
 div {
   height: 90vh;
+}
+
+@media (max-width: 600px) {
+  div {
+    height: 45vh;
+  }
+  .banner {
+    margin-bottom: 45vh;
+  }
 }
 .swiper {
   --swiper-navigation-size: 30px;

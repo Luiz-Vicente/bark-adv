@@ -1,5 +1,6 @@
 <template>
   <div v-bind:style="myStyle" v-bind:class="myClass">
+    <TextAtom v-if="title" tag="h1" customClass="text-custom-white fs-1 fw-bold position-relative top-50 text-center w-100" :text="title" />
     <i
       v-if="info"
       data-bs-toggle="tooltip"
@@ -15,6 +16,7 @@ export default {
     src: { type: String, required: true },
     customStyle: String,
     customClass: String,
+    title: String,
     info: { type: String, default: null },
   },
   mounted() {
@@ -40,6 +42,6 @@ export default {
 div {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 </style>

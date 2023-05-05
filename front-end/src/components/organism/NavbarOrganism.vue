@@ -1,6 +1,8 @@
 <template>
-  <nav style="z-index: 2;" class="navbar navbar-dark position-fixed w-100 navbar-expand-lg bg-black border-2 border-bottom border-custom-gold">
-  <!-- <nav style="z-index: 2;" class="navbar navbar-dark navbar-expand-lg bg-black border-2 border-bottom border-custom-gold"> -->
+  <nav
+    style="z-index: 2"
+    class="navbar navbar-dark position-fixed w-100 navbar-expand-lg bg-black border-2 border-bottom border-custom-gold"
+  >
     <div class="container-fluid">
       <ImageAtom
         src="/images/logos/logo-branca-pequena.webp"
@@ -11,7 +13,7 @@
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
+        data-bs-target="/#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -24,36 +26,43 @@
             <a
               class="nav-link active text-white text-decoration-none p-4 fs-4"
               aria-current="page"
-              href="#time"
+              href="/#time"
               >Time</a
             >
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-white text-decoration-none p-4 fs-4"
-              href="#especialidades"
+              href="/#especialidades"
               >Especialidades</a
             >
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a
               class="nav-link text-white text-decoration-none p-4 fs-4"
-              href="#artigos"
+              href="/#artigos"
               >Artigos</a
             >
-          </li>
+          </li> -->
           <li class="nav-item">
             <a
               class="nav-link text-white text-decoration-none p-4 fs-4"
-              href="#rodape"
+              href="/#rodape"
               >Contato</a
             >
           </li>
           <li class="nav-item">
             <a
               class="nav-link text-white text-decoration-none p-4 fs-4"
-              href="#rodape"
+              href="/#rodape"
               >Localização</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-white text-decoration-none p-4 fs-4"
+              href="/tour"
+              >Tour</a
             >
           </li>
         </ul>
