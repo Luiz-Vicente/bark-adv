@@ -1,3 +1,7 @@
+<script setup>
+import { RouterLink } from "vue-router";
+</script>
+
 <template>
   <nav
     style="z-index: 2"
@@ -58,13 +62,13 @@
               >Localização</a
             >
           </li>
-          <!-- <li class="nav-item">
-            <a
+          <li class="nav-item">
+            <RouterLink
               class="nav-link text-white text-decoration-none p-4 fs-4"
-              href="/tour"
-              >Tour</a
+              to="/tour"
+              >Tour</RouterLink
             >
-          </li> -->
+          </li>
         </ul>
       </div>
     </div>
