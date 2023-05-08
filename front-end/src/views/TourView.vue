@@ -101,9 +101,8 @@
       <TextAtom
         customClass="text-custom-white fw-bold fs-2 pt-5"
         tag="h2"
-        text="Sala"
+        text="Sala do Chede bark"
       />
-      do Chede bark
       <iframe
         class="w-100"
         height="500"
