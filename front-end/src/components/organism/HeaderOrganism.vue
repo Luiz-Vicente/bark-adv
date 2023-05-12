@@ -74,7 +74,7 @@ export default {
       bannersList: [
         {
           src: "/images/banners/irmaos.webp",
-          title: "Escritório Familiar",
+          title: "Escritório Focado em Soluções Empresariais",
           description: "Responsabilidade com seu caso",
         },
         {
@@ -92,11 +92,6 @@ export default {
           src: "/images/banners/transparencia.webp",
           title: "Transparência",
           description: "prezamos pela comunicação",
-        },
-        {
-          src: "/images/banners/etica.webp",
-          title: "Ética",
-          description: "segurança garantida em seu caso",
         },
         {
           src: "/images/banners/nacional.webp",

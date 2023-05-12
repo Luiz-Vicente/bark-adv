@@ -46,7 +46,7 @@ export default {
         },
         {
           src: "/images/especialidades/imobiliario.webp",
-          name: "Imobiliario",
+          name: "Imobiliário",
           // tooltipText: "Clique na imagem para conhecer o advogado",
         },
         {
