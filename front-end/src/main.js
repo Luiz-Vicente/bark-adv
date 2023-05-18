@@ -12,9 +12,9 @@ import "./assets/main.scss";
 
 const app = createApp(App);
 
+app.component('ImageAtom', ImageAtom);
+app.component('TextAtom', TextAtom);
+
 app.use(router);
 
 app.mount("#app");
-
-app.component('ImageAtom', ImageAtom);
-app.component('TextAtom', TextAtom);

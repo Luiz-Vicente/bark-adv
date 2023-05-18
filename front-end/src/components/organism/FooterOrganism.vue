@@ -87,7 +87,7 @@
       </div>
     </div>
   </Flicking>
-  <Footer id="rodape" class="bg-custom-black" style="padding-top: 15vh">
+  <footer id="rodape" class="bg-custom-black" style="padding-top: 15vh">
     <div class="container d-flex flex-md-row flex-column">
       <div class="col-md-6 col pe-md-5 mb-md-0 mb-5">
         <TextAtom
@@ -101,7 +101,6 @@
           height="270.55"
           style="border: 0; border-radius: 10px"
           loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
         <div
           class="d-flex flex-column align-items-center justify-content-center mt-3"
@@ -212,7 +211,7 @@
         <a class="text-custom-gold fw-semibold text-decoration-none" href="https://devvicente.com.br">devvicente.com.br</a>
       </div>
     </div>
-  </Footer>
+  </footer>
 </template>
 
 <script>

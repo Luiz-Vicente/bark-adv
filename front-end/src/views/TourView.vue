@@ -115,14 +115,5 @@
         ></iframe>
       </div>
     </div>
-    <FooterOrganism />
   </div>
 </template>
-
-<script lang="js">
-import FooterOrganism from "../components/organism/FooterOrganism.vue";
-
-export default {
-  components: { FooterOrganism },
-};
-</script>
