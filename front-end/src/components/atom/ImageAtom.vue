@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
 import { Tooltip } from "bootstrap/dist/js/bootstrap.esm.min.js";
 export default {
   props: {
