@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { Tooltip } from 'bootstrap/dist/js/bootstrap.esm.min.js'
 export default {
   props: {
     src: { type: String, required: true },
@@ -19,12 +20,12 @@ export default {
     title: String,
     info: { type: String, default: null },
   },
-  mounted() {
+  created() {
     const tooltipTriggerList = document.querySelectorAll(
       '[data-bs-toggle="tooltip"]'
     );
     const tooltipList = [...tooltipTriggerList].map(
-      (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
     );
   },
   computed: {
