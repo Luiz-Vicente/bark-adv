@@ -1,6 +1,11 @@
 <template>
   <div v-bind:style="myStyle" v-bind:class="myClass">
-    <TextAtom v-if="title" tag="h1" customClass="text-custom-white fs-1 fw-bold position-relative top-50 text-center w-100" :text="title" />
+    <TextAtom
+      v-if="title"
+      tag="h1"
+      customClass="text-custom-white fs-1 fw-bold position-relative top-50 text-center w-100"
+      :text="title"
+    />
     <i
       v-if="info"
       data-bs-toggle="tooltip"
@@ -11,7 +16,9 @@
 </template>
 
 <script>
-import { Tooltip } from 'bootstrap/dist/js/bootstrap.esm.min.js'
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import { Tooltip } from "bootstrap/dist/js/bootstrap.esm.min.js";
 export default {
   props: {
     src: { type: String, required: true },
@@ -20,13 +27,10 @@ export default {
     title: String,
     info: { type: String, default: null },
   },
-  created() {
-    const tooltipTriggerList = document.querySelectorAll(
-      '[data-bs-toggle="tooltip"]'
-    );
-    const tooltipList = [...tooltipTriggerList].map(
-      (tooltipTriggerEl) => new Tooltip(tooltipTriggerEl)
-    );
+  mounted() {
+    Array.from(
+      document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    ).forEach((tooltipNode) => new Tooltip(tooltipNode));
   },
   computed: {
     myStyle() {
