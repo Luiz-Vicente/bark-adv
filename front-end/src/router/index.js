@@ -15,6 +15,11 @@ const router = createRouter({
       name: "tour",
       component: TourView,
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: "not-found",
+      component: HomeView,
+    },
   ],
 });
 
