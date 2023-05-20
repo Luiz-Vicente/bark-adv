@@ -120,14 +120,16 @@
             <div class="col-6 d-flex flex-column justify-content-between">
               <div class="d-flex justify-content-end">
                 <TextAtom
-                  tag="p"
+                  tag="a"
+                  href="https://www.facebook.com/barkadvogados/?locale=pt_BR"
                   customClass="text-custom-white fw-normal fs-5 me-2"
                   text="/barkadvogados"
                 /><i class="bi bi-facebook text-custom-white fs-4"></i>
               </div>
               <div class="d-flex justify-content-end">
                 <TextAtom
-                  tag="p"
+                  tag="a"
+                  href="https://www.instagram.com/barkadvogados/"
                   customClass="text-custom-white fw-normal fs-5 me-2"
                   text="@barkadvogados"
                 /><i class="bi bi-instagram text-custom-white fs-4"></i>
