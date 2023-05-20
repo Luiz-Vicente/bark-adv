@@ -2,54 +2,30 @@
   <div style="height: 10vh; width: 100%"></div>
   <div class="banner d-flex flex-md-row flex-column bg-custom-gray">
     <div class="col-md-6 col px-3 bg-gradient-gray">
-      <swiper
-        @swiper="setFirstSwiper"
-        :controller="{ control: secondSwiper }"
-        :direction="'vertical'"
-        :loop="true"
-        :pagination="{
+      <swiper @swiper="setFirstSwiper" :controller="{ control: secondSwiper }"
+        :direction="isMobile ? 'horizontal' : 'vertical'" :loop="true" :pagination="{
           clickable: true,
-        }"
-        :modules="modules"
-      >
+        }" :modules="modules">
         <swiper-slide v-for="banner in bannersList" :key="banner.index">
           <div class="d-flex fw-normal justify-content-center flex-column">
-            <TextAtom
-              tag="h1"
-              customClass="text-white fw-bold text-uppercase"
-              v-bind:text="banner.title"
-            />
-            <TextAtom
-              tag="p"
-              v-bind:text="banner.description"
-              customClass="fs-3 text-white fw-normal text-lowercase"
-            />
+            <TextAtom tag="h1" customClass="text-white fw-bold text-uppercase" v-bind:text="banner.title" />
+            <TextAtom tag="p" v-bind:text="banner.description"
+              customClass="fs-3 text-white fw-normal text-lowercase opacity-50" />
           </div>
         </swiper-slide>
       </swiper>
     </div>
     <div class="col-md-6 col d-md-block bg-custom-gray">
-      <swiper
-        :slidesPerView="1"
-        :spaceBetween="30"
-        :autoplay="{
-          delay: 5000,
-          disableOnInteraction: false,
-        }"
-        :loop="true"
-        :keyboard="{
-          enabled: true,
-        }"
-        :pagination="{
-          clickable: true,
-        }"
-        :navigation="true"
-        :modules="modules"
-        @swiper="setSecondSwiper"
-        :controller="{ control: firstSwiper }"
-      >
+      <swiper :slidesPerView="1" :spaceBetween="30" :autoplay="{
+        delay: 5000,
+        disableOnInteraction: false,
+      }" :loop="true" :keyboard="{
+  enabled: true,
+}" :pagination="{
+  clickable: true,
+}" :navigation="true" :modules="modules" @swiper="setSecondSwiper" :controller="{ control: firstSwiper }">
         <swiper-slide v-for="banner in bannersList" :key="banner.index">
-          <ImageAtom v-bind:src="banner.src" />
+          <ImageAtom v-bind:src="banner.src" customStyle="background-position:center;" />
         </swiper-slide>
       </swiper>
     </div>
@@ -74,29 +50,29 @@ export default {
       bannersList: [
         {
           src: "/images/banners/irmaos.webp",
-          title: "Escritório Focado em Soluções Empresariais",
-          description: "Responsabilidade com seu caso",
+          title: "Focado em Soluções Empresariais",
+          description: "criação de ativos, recuperação de crédito e planejamento",
         },
         {
           src: "/images/banners/setorizado.webp",
-          title: "Escritório Setorizado",
+          title: "Setorizado",
           description:
-            "ESPECIALISTAS DE DIVERSAS ÁREAS PREPARADOS PARA ATENDER SEU CASO",
+            "ESPECIALISTAS DE DIVERSAS ÁREAS PARA ATENDER SEU CASO",
         },
-        {
-          src: "/images/banners/dedicacao.webp",
-          title: "Dedicação",
-          description: "comprometimento com a qualidade",
-        },
-        {
-          src: "/images/banners/transparencia.webp",
-          title: "Transparência",
-          description: "prezamos pela comunicação",
-        },
+        // {
+        //   src: "/images/banners/dedicacao.webp",
+        //   title: "Dedicação",
+        //   description: "comprometimento com a qualidade",
+        // },
+        // {
+        //   src: "/images/banners/transparencia.webp",
+        //   title: "Transparência",
+        //   description: "prezamos pela comunicação",
+        // },
         {
           src: "/images/banners/nacional.webp",
           title: "Abrangência nacional",
-          description: "expandindo e atendendo cada vez mais longe",
+          description: "atendemos em todo o território nacional",
         },
       ],
     };
@@ -118,6 +94,15 @@ export default {
       setSecondSwiper,
       modules: [Controller, Navigation, Autoplay],
     };
+  },
+  computed: {
+    isMobile() {
+      if (window.innerWidth < 950) {
+        return true;
+      } else {
+        return false;
+      }
+    }
   },
   mounted() {
     const nextButton = document.querySelector(".swiper-button-next");
@@ -147,14 +132,17 @@ div {
   div {
     height: 45vh;
   }
+
   .banner {
     margin-bottom: 45vh;
   }
 }
+
 .swiper {
   --swiper-navigation-size: 30px;
   --swiper-theme-color: #f4f4f4;
 }
+
 .bg-gradient-gray {
   background: linear-gradient(135deg, #111111 0%, rgba(17, 17, 17, 0) 100%);
 }

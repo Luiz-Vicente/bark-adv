@@ -7,7 +7,7 @@
       :text="title"
     />
     <i
-      v-if="info"
+      v-if="false"
       data-bs-toggle="tooltip"
       :data-bs-title="info"
       class="bi bi-info-circle me-2 mt-2 text-custom-white fw-bold fs-4 shadow"
@@ -45,6 +45,5 @@ export default {
 div {
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="bg-custom-gray" style="padding-top: 15vh"></div>
-  <Flicking
+  <!-- <Flicking
     class="p-2 d-flex bg-custom-gray-light"
     :options="{ circular: true }"
     :plugins="plugins"
@@ -86,7 +86,7 @@
         />
       </div>
     </div>
-  </Flicking>
+  </Flicking> -->
   <footer id="rodape" class="bg-custom-black" style="padding-top: 15vh">
     <div class="container d-flex flex-md-row flex-column">
       <div class="col-md-6 col pe-md-5 mb-md-0 mb-5">
@@ -98,17 +98,17 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.296021305151!2d-49.19393298962078!3d-25.428365032732355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dcefc5701b26b3%3A0x5c408b339eafd4bd!2sBark%20%26%20Bark%20Advogados%20Associados%20-%20Pinhais!5e0!3m2!1spt-PT!2sbr!4v1683241569922!5m2!1spt-PT!2sbr"
           class="w-100"
-          height="270.55"
+          height="335.55"
           style="border: 0; border-radius: 10px"
           loading="lazy"
         ></iframe>
         <div
           class="d-flex flex-column align-items-center justify-content-center mt-3"
         >
-          <ImageAtom
+          <!-- <ImageAtom
             src="/images/logos/logo-branca-total.webp"
             style="height: 65px; width: 300px"
-          />
+          /> -->
           <div class="d-flex mt-4">
             <div class="col-6">
               <TextAtom
@@ -133,6 +133,13 @@
                   customClass="text-custom-white fw-normal fs-5 me-2"
                   text="@barkadvogados"
                 /><i class="bi bi-instagram text-custom-white fs-4"></i>
+              </div>
+              <div class="d-flex justify-content-end">
+                <TextAtom
+                  tag="p"
+                  customClass="text-custom-white fw-normal fs-5 me-2"
+                  text="(41) 3097-0333"
+                /><i class="bi bi-phone text-custom-white fs-4"></i>
               </div>
             </div>
           </div>

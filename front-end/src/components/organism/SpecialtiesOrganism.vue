@@ -11,13 +11,13 @@
         <div
           v-for="(spec, index) in listSpecialties"
           :key="index"
-          class="col-12 col-md-3 mb-3"
+          class="card-bark mb-3"
         >
           <div class="card bg-custom-black h-100">
             <ImageAtom
               :src="spec.src"
-              customClass="card-img-top border-2 border-bottom border-custom-gold"
-              customStyle="height: 280px; border-radius: 10px 10px 0 0"
+              customClass="card-img-center border-2 border-bottom border-custom-gold"
+              customStyle="height: 110px; border-radius: 10px 10px 0 0; background-position: center;"
               :info="spec.tooltipText"
             />
             <div class="card-body py-4">
@@ -45,11 +45,6 @@ export default {
           // tooltipText: "Clique na imagem para conhecer o advogado",
         },
         {
-          src: "/images/especialidades/imobiliario.webp",
-          name: "Imobiliário",
-          // tooltipText: "Clique na imagem para conhecer o advogado",
-        },
-        {
           src: "/images/especialidades/civel.webp",
           name: "Cível",
           // tooltipText: "Clique na imagem para conhecer o advogado",
@@ -57,6 +52,11 @@ export default {
         {
           src: "/images/especialidades/trabalhista.webp",
           name: "Trabalhista",
+          // tooltipText: "Clique na imagem para conhecer o advogado",
+        },
+        {
+          src: "/images/especialidades/imobiliario.webp",
+          name: "Imobiliário",
           // tooltipText: "Clique na imagem para conhecer o advogado",
         },
         {
@@ -70,13 +70,13 @@ export default {
           // tooltipText: "Clique na imagem para conhecer o advogado",
         },
         {
-          src: "/images/especialidades/eleitoral.webp",
-          name: "Eleitoral",
+          src: "/images/especialidades/internacional.webp",
+          name: "Internacional",
           // tooltipText: "Clique na imagem para conhecer o advogado",
         },
         {
-          src: "/images/especialidades/internacional.webp",
-          name: "Internacional",
+          src: "/images/especialidades/familia.webp",
+          name: "Família e Sucessões",
           // tooltipText: "Clique na imagem para conhecer o advogado",
         },
       ],
@@ -89,5 +89,21 @@ export default {
 .card {
   cursor: pointer;
   border-radius: 10px !important;
+}
+
+.card-bark {
+  width: 23%;
+  margin-right: 20px;
+}
+
+.card-bark:nth-child(4) {
+  margin-right: 0;
+}
+
+@media(max-width: 425px) {
+  .card-bark {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 </style>
