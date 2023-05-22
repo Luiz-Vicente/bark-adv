@@ -49,6 +49,7 @@
                           </button>
                           <a target="_blank" :href="adv.urlCOntact"
                               class="btn btn-custom-gold fw-semibold text-custom-white">
+                              <i class="bi bi-whatsapp text-white fs-5"></i>
                               Entrar em contato
                           </a>
                       </div>
