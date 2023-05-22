@@ -16,14 +16,14 @@ import { RouterLink } from "vue-router";
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link active text-white text-decoration-none p-4 fs-4" aria-current="page"
-              href="/#sobre">Sobre</a>
+              v-on:click="toogle" href="/#sobre">Sobre</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active text-white text-decoration-none p-4 fs-4" aria-current="page"
-              href="/#equipe">Profissionais</a>
+            v-on:click="toogle" href="/#equipe">Profissionais</a>
           </li>
         <li class="nav-item">
-          <a class="nav-link text-white text-decoration-none p-4 fs-4" href="/#especialidades">Especialidades</a>
+          <a class="nav-link text-white text-decoration-none p-4 fs-4" v-on:click="toogle" href="/#especialidades">Especialidades</a>
         </li>
         <!-- <li class="nav-item">
             <a
@@ -33,13 +33,13 @@ import { RouterLink } from "vue-router";
                   >
                 </li> -->
           <li class="nav-item">
-            <a class="nav-link text-white text-decoration-none p-4 fs-4" href="/#rodape">Contato</a>
+            <a class="nav-link text-white text-decoration-none p-4 fs-4" v-on:click="toogle" href="/#rodape">Contato</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white text-decoration-none p-4 fs-4" href="/#rodape">Localização</a>
+            <a class="nav-link text-white text-decoration-none p-4 fs-4" v-on:click="toogle" href="/#rodape">Localização</a>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link text-white text-decoration-none p-4 fs-4" to="/tour">Tour</RouterLink>
+            <RouterLink class="nav-link text-white text-decoration-none p-4 fs-4" v-on:click="toogle" to="/tour">Tour</RouterLink>
           </li>
         </ul>
       </div>
@@ -54,7 +54,13 @@ export default {
   mounted() {
     Array.from(
       document.querySelectorAll('[data-bs-toggle="collapse"]')
-    ).forEach((collapseNode) => new Collapse(collapseNode));
+    ).forEach((navBar) => new Collapse(navBar));
+  },
+  methods: {
+    toogle(){
+      const nav = new Collapse(document.getElementById('navbarNav'));
+      nav.close()
+    }
   }
 }
 </script>
