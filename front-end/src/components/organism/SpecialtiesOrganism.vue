@@ -87,7 +87,6 @@ export default {
 
 <style scoped>
 .card {
-  cursor: pointer;
   border-radius: 10px !important;
 }
 
