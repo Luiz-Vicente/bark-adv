@@ -39,7 +39,7 @@ import { RouterLink } from "vue-router";
             <a class="nav-link text-white text-decoration-none p-4 fs-4" v-on:click="toogle" href="/#rodape">Localização</a>
           </li>
           <li class="nav-item">
-            <RouterLink class="nav-link text-white text-decoration-none p-4 fs-4" v-on:click="toogle" to="/tour">Tour</RouterLink>
+            <a class="nav-link text-white text-decoration-none p-4 fs-4" v-on:click="toogle" href="/tour">Tour</a>
           </li>
         </ul>
       </div>
