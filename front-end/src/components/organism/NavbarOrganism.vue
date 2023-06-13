@@ -84,20 +84,18 @@
 import { Collapse } from "bootstrap/dist/js/bootstrap.esm.min.js";
 
 export default {
-  data() {
-    return {
-      nav: null,
-    };
-  },
   mounted() {
-    this.nav = new Collapse(document.getElementById("navbarNav"));
+    Array.from(
+      document.querySelectorAll('[data-bs-toggle="collapse"]')
+    ).forEach((navBar) => new Collapse(navBar));
   },
   methods: {
     toggle() {
       const screenWidth =
         window.innerWidth || document.documentElement.clientWidth;
       if (screenWidth < 900) {
-        this.nav.hide();
+        const nav = new Collapse(document.getElementById("navbarNav"));
+        nav.hide();
       }
     },
   },
