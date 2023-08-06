@@ -3,9 +3,9 @@
       <div class="container">
           <TextAtom tag="h2" text="Nossa equipe" customClass="fs-2 fw-bold text-custom-white mb-2" />
           <!-- Cards Section -->
-          <div class="row">
+          <div class="d-flex flex-column flex-md-row flex-wrap">
               <div v-for="(adv, index) in listAdvs" :key="index" data-bs-toggle="modal" :data-bs-target="'#' + adv.tag"
-                  class="col-12 col-md-3 px-4 mb-3">
+                  class="col-12 col-md-3 px-md-2 mb-3">
                   <div class="card flex-md-column flex-row bg-custom-black h-100">
                       <ImageAtom :src="adv.src"
                           customClass="d-none d-md-flex card-img-top border-2 border-bottom border-custom-gold"

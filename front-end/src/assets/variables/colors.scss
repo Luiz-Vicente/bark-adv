@@ -3,8 +3,9 @@ $custom-white:        #F4F4F4;
 $custom-gold:         #BF894B;
 $custom-gold-dark:    #805627;
 $custom-gray-light:   #323232;
-$custom-gray:         #1E1E1E;
+$custom-gray:         #141414;
 $custom-gray-dark:    #111111;
+$custom-red-light:    #FF0000;
 
 $colors: (
   "custom-black":       $custom-black,
@@ -14,6 +15,7 @@ $colors: (
   "custom-gray-light":  $custom-gray-light,
   "custom-gray":        $custom-gray,
   "custom-gray-dark":   $custom-gray-dark,
+  "custom-red-light":   $custom-red-light,
 );
 
 $theme-colors: (
@@ -24,4 +26,5 @@ $theme-colors: (
   "custom-gray-light":  $custom-gray-light,
   "custom-gray":        $custom-gray,
   "custom-gray-dark":   $custom-gray-dark,
+  "custom-red-light":   $custom-red-light,
 );

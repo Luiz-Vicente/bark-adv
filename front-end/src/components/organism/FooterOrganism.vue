@@ -205,12 +205,10 @@
             value="https://barkadvogados.com.br"
           />
           <input type="hidden" name="_template" value="box" />
-          <button
+          <Button
             type="submit"
-            class="btn btn-custom-gold text-custom-white fw-semibold py-2"
-          >
-            Enviar mensagem
-          </button>
+            text="Enviar mensagem"
+          />
         </form>
       </div>
     </div>
@@ -225,6 +223,7 @@
 
 <script>
 import Flicking from "@egjs/vue3-flicking";
+import Button from "@/components/atom/Button";
 import { AutoPlay } from "@egjs/flicking-plugins";
 import "@egjs/vue3-flicking/dist/flicking.css";
 // Or, if you have to support IE9
@@ -233,6 +232,7 @@ import "@egjs/vue3-flicking/dist/flicking-inline.css";
 export default {
   components: {
     Flicking,
+    Button
   },
   data() {
     return {

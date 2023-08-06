@@ -4,10 +4,9 @@
     class="navbar navbar-dark position-fixed w-100 navbar-expand-lg bg-black border-2 border-bottom border-custom-gold"
   >
     <div class="container-fluid">
-      <router-link to="/"
+      <router-link to="/" class="col-md-2 col-6"
         ><img
           src="/images/logos/logo-branca-total.svg"
-          style="width: 250px; height: 70px"
           class="navbar-brand"
       /></router-link>
       <button
@@ -25,7 +24,7 @@
         <ul class="navbar-nav">
           <li class="nav-item" v-on:click="toggle">
             <a
-              class="nav-link active text-white text-decoration-none p-4 fs-4"
+              class="nav-link active text-white text-decoration-none fs-5"
               aria-current="page"
               href="/#sobre"
               >Sobre</a
@@ -33,7 +32,7 @@
           </li>
           <li class="nav-item" v-on:click="toggle">
             <a
-              class="nav-link active text-white text-decoration-none p-4 fs-4"
+              class="nav-link active text-white text-decoration-none fs-5"
               aria-current="page"
               href="/#equipe"
               >Profissionais</a
@@ -41,37 +40,44 @@
           </li>
           <li class="nav-item" v-on:click="toggle">
             <a
-              class="nav-link text-white text-decoration-none p-4 fs-4"
+              class="nav-link text-white text-decoration-none fs-5"
               href="/#especialidades"
               >Especialidades</a
             >
           </li>
           <!-- <li class="nav-item">
             <a
-              class="nav-link text-white text-decoration-none p-4 fs-4"
+              class="nav-link text-white text-decoration-none fs-5"
                     href="/#artigos"
                     >Artigos</a
                   >
                 </li> -->
           <li class="nav-item" v-on:click="toggle">
             <a
-              class="nav-link text-white text-decoration-none p-4 fs-4"
+              class="nav-link text-white text-decoration-none fs-5"
               href="/#rodape"
               >Contato</a
             >
           </li>
           <li class="nav-item" v-on:click="toggle">
             <a
-              class="nav-link text-white text-decoration-none p-4 fs-4"
+              class="nav-link text-white text-decoration-none fs-5"
               href="/#rodape"
               >Localização</a
             >
           </li>
           <li class="nav-item" v-on:click="toggle">
             <a
-              class="nav-link text-white text-decoration-none p-4 fs-4"
+              class="nav-link text-white text-decoration-none fs-5"
               href="/tour"
               >Tour</a
+            >
+          </li>
+          <li class="nav-item" v-on:click="toggle">
+            <a
+              class="nav-link text-white text-decoration-none fs-5"
+              href="/blog"
+              >Blog</a
             >
           </li>
         </ul>
@@ -102,9 +108,8 @@ export default {
 };
 </script>
 
-<style scoped>
-a:hover {
-  transition: all 0.4s;
-  font-weight: 500;
+<style lang="scss" scoped>
+nav {
+  z-index: 9999;
 }
 </style>
