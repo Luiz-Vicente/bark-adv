@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div style="height: 10vh; width: 100%"></div>
     <ImageAtom
       src=""
       customClass="w-100 bg-custom-gray-dark border-bottom border-custom-gold border-2"

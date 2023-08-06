@@ -1,7 +1,7 @@
 <template>
   <nav
     style="z-index: 2"
-    class="navbar navbar-dark position-fixed w-100 navbar-expand-lg bg-black border-2 border-bottom border-custom-gold"
+    class="navbar navbar-dark w-100 navbar-expand-lg bg-black border-2 border-bottom border-custom-gold"
   >
     <div class="container-fluid">
       <router-link to="/" class="col-md-2 col-6"
@@ -110,6 +110,8 @@ export default {
 
 <style lang="scss" scoped>
 nav {
+  position: sticky;
+  top: 0px;
   z-index: 9999;
 }
 </style>

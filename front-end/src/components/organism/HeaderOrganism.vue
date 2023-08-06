@@ -1,5 +1,4 @@
 <template>
-  <div style="height: 10vh; width: 100%"></div>
   <div class="banner d-flex flex-md-row flex-column bg-custom-gray">
     <div class="col-md-6 col px-3 bg-gradient-gray">
       <swiper @swiper="setFirstSwiper" :controller="{ control: secondSwiper }"
